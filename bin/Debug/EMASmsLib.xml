@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EMASmsLib</name>
+    </assembly>
+    <members>
+        <member name="T:EMASmsLib.EMASms">
+            <summary>
+            EMASms 短信插件
+            </summary>
+        </member>
+        <member name="F:EMASmsLib.EMASms.configErrorMsg">
+            <summary>
+            配置错误信息模板
+            </summary>
+        </member>
+        <member name="F:EMASmsLib.EMASms.accountSid">
+            <summary>
+            一些内部字段
+            </summary>
+        </member>
+        <member name="F:EMASmsLib.EMASms.ecpId">
+            <summary>
+            一些内部字段
+            </summary>
+        </member>
+        <member name="F:EMASmsLib.EMASms.appId">
+            <summary>
+            一些内部字段
+            </summary>
+        </member>
+        <member name="F:EMASmsLib.EMASms.token">
+            <summary>
+            一些内部字段
+            </summary>
+        </member>
+        <member name="F:EMASmsLib.EMASms.sendUrl">
+            <summary>
+            一些内部字段
+            </summary>
+        </member>
+        <member name="M:EMASmsLib.EMASms.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            私有构造方法
+            </summary>
+            <param name="accountSid">accountSid</param>
+            <param name="ecpId">ecpId</param>
+            <param name="appId">appId</param>
+            <param name="token">token</param>
+        </member>
+        <member name="M:EMASmsLib.EMASms.CreateWithAppSettings">
+            <summary>
+            使用 app.config 或 web.config 中的配置初始化 EMASms
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EMASmsLib.EMASms.CreateWithParam(System.String,System.String,System.String,System.String)">
+            <summary>
+            手动使用参数初始化 EMASms
+            </summary>
+            <param name="accountSid"></param>
+            <param name="ecpId"></param>
+            <param name="appId"></param>
+            <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMASmsLib.EMASms.GetConfigSetting(System.String)">
+            <summary>
+            从 app.config 或 web.config 中读取配置
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMASmsLib.EMASms.Send(System.String,System.String)">
+            <summary>
+            发送短信给用户
+            </summary>
+            <param name="phone"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMASmsLib.EMASms.GetTs">
+            <summary>
+            获取 ts 参数（自1970年1月1日开始的毫秒数）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EMASmsLib.EMASms.GetSign(System.Int64)">
+            <summary>
+            生成签名：md5(accountSid+token+ts)
+            </summary>
+            <param name="ts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EMASmsLib.EMASms.GetMd5(System.String)">
+            <summary>
+            获取字符串对应的 MD5
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
